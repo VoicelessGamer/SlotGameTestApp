@@ -1,0 +1,30 @@
+{
+	"locations": [
+		{
+			"endpoint": "ws://localhost:8080/rgs/endpoint",
+			"rigging": "http://localhost:8080/rgs/rest/rig/"
+		}
+	],
+	"games": [
+		{
+			"name": "Double Max",
+			"gameId": "yg_001_dms"
+		},
+		{
+			"name": "Jazz Megaways",
+			"gameId": "bs081_jnm"
+		},
+        {
+            "name": "Joker Lotto",
+            "gameId": "bs080_jls"
+        },
+		{
+			"name": "Wings of Hermes",
+			"gameId": "jrs_004_woh"
+		},
+		{
+			"name": "Infinity Ways",
+			"gameId": "gl002_iws"
+		}
+	]
+}

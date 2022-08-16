@@ -1,0 +1,79 @@
+0.0.1
+-Initial pass of the game.
+
+0.0.2
+-Fixed issue with log when the max entry number was reached the log would remove the first entry and stop removing any other afterwards.
+
+0.0.3
+-Changed the scroll sensitivity on all text areas from 20 to 5.
+-Updated the log update function to throw exceptions when the log array was updated at the same time as the text field update.
+-Added option for infinite log entries to editor.
+
+0.1.0
+-Added error logs for parsing the json files.
+-Log view updated to allow reloading of previous server responses.
+-Log view is now colour coded to make it easier to read.
+-Added clear logs button to remove all currently displayed log entries.
+-Maximum number of log entries capped at 1000.
+-Scroll sensitivity for all views updated to be more representative of the level of data being displayed in each.
+
+0.1.1
+-Added buttons to cycle through all reels objects in a given server response. Allowing reels to be seen before and after each reel modifier.
+-Added rigging requests to the log entries.
+-Added time stamp to log entries.
+-Fixed issue where requests beginning with a newline character would show in the log as empty strings.
+-Added checks around the rigging address location and requests to push error to log for incorrect input.
+-Locked the init request buttons after use.
+-Request buttons lock while waiting for response.
+-Views and reel symbols clear upon opening new connection.
+
+0.1.2
+-Changed the max log limit to 500 to limit lag at high number of entries.
+
+0.2.0
+-Made the award, feature and response json views read-only so that text cannot be typed into those fields.
+-Randomised colours after the predefined 20 colours used.
+-Thread-safe function handling implemented.
+-Full commenting.
+-Code clean up.
+
+0.2.1
+-Bug fix for reel view moving when scaling and the reel view scale not resetting when loading a symbol layout that is smaller than the previous layout.
+
+0.2.2
+-Bug fix introduced in version 0.2.0 where the rigging url wasn't updated with the current play token.
+
+0.2.3
+-Lowered the max log entries again to 250 as with testing, high number of entries causes a lot of lag and potentially causes crashes.
+-Removed the log entry message from server response entries to further reduce lag. Removes a lot of text from on-screen so that the canvas has less to render.
+-To further improve performance the response json is no longer loaded on each server response/entry reload. New button added to load the current response json.
+
+0.3.0
+-Added ability to update the requests in a configuration panel before they are sent.
+-Custom request for each server request type is saved to json file which is reloaded on opening the tool.
+
+1.0.0 (Initial Release)
+-Added support for multi reel (dutch-style) games.
+-Added buttons to rigging section to move forward and backwards over previously sent rigging requests
+-Added simple highlight colour change to the clickable log entries.
+
+1.0.1
+-Updated reel view to account for missing reels in cases of Buy a Bonus.
+-Updated the award view to use the last bet in the list for displaying due to alternate profiles putting the auxilliary bet first.
+
+1.0.2
+-Updated the onMessage event to include a fail check.
+
+1.0.3
+-Added the territory tag to the end of a randomly generated play token so that minimum request times do not effect testing.
+
+1.0.4
+-Added an event manager and moved some of the code base from the request system to this new inbetween class to make the code cleaner and easier to extend.
+-Update queue added to the new event manager and remove from all other classes to improve efficiency.
+
+1.0.5
+- Updated the Reel View class where symbols are generated using a configuration to only generate symbol objects if that position is within the bounds of symbol array in the server response.
+
+1.0.6
+- Fixed the clickable logs bug where previous responses couldn't be reviewed.
+- Made some performance improvements by changing rendering and shadow options.

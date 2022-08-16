@@ -1,0 +1,9 @@
+{
+    "customInitRequest": "{\"type\":\"init\",\"freeplay\":false,\"playToken\":\"PLAY_TOKEN\",\"vendor\":\"bs\",\"game\":{\"code\":\"GAME_CODE\",\"version\":\"0.0.1\"}}",
+    "customStartRequest": "{\"type\":\"start\",\"bet\":{\"stake\":{\"cv\":\"STAKE_INDEX\",\"cl\":0}},\"pi\":\"PROFILE_INDEX\"}",
+    "customUpdate3Request": "{\"type\":\"update\",\"subType\":3,\"pickOption\":3}",
+    "customUpdate4Request": "{\"type\":\"update\",\"subType\":4,\"accepted\":true}",
+    "customGamble3Request": "{\"type\":\"update\",\"subType\":3,\"gambleOption\":\"GAMBLE\",\"gambleIndex\":0}",
+    "customGamble4Request": "{\"type\":\"update\",\"subType\":4,\"gambleOption\":\"COLLECT\"}",
+    "customEndRequest": "{\"type\":\"end\"}"
+}
